@@ -1,0 +1,255 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (CACW_1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  BVH.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(126): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(193): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(233): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(302): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(307): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(317): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(323): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(328): warning C4244: 'argument': conversion from 'const double' to 'GLfloat', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(335): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(341): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(351): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(352): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(353): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(367): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.cpp(440): warning C4244: 'argument': conversion from 'GLdouble' to 'GLint', possible loss of data
+  CameraObj.cpp
+  Cloth.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\cloth.cpp(13): warning C4838: conversion from '_Ty' to 'int' requires a narrowing conversion
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\cloth.cpp(13): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\cloth.cpp(60): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\cloth.cpp(68): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  DataLoader.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(92): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(93): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(101): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(102): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(110): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(111): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(226): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(227): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(235): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(236): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(244): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(245): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(252): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(260): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(269): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(270): warning C4244: 'argument': conversion from 'uint32_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dataloader.cpp(332): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl2.cpp
+  imgui_impl_opengl3.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+  imgui_widgets.cpp
+  Frame.cpp
+  FrameManager.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(23): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(61): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\framemanager.cpp(63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  GameObject.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\gameobject.cpp(85): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  GlobalVariables.cpp
+  IKHelperObject.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+  IKSystem.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(63): warning C4244: 'initializing': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(74): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(117): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(118): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(119): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(122): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(180): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(182): warning C4244: 'argument': conversion from 'float' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(183): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(267): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(272): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(298): warning C4244: 'initializing': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(356): warning C4244: 'initializing': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(359): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(386): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(387): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(388): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\iksystem.cpp(391): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glfw\include\glfw\glfw3.h(104): note: see previous definition of 'APIENTRY'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(140): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(179): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(369): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(370): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(374): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(375): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(377): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(378): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\main.cpp(412): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  MotionFrames.cpp
+  Particle.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+  Compiling...
+  Shader.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+  Skeleton.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(28): warning C4244: 'argument': conversion from 'int' to 'const _Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(56): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(67): warning C4244: '=': conversion from 'unsigned __int64' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(79): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(81): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\skeleton.cpp(97): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Spring.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+  Timer.cpp
+  UserInterface.cpp
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(104): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\bvh.h(106): warning C4267: 'return': conversion from 'size_t' to 'const int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(6992): warning C4005: 'GL_PATCHES': macro redefinition
+  d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\dependencies\glew\include\gl\glew.h(331): note: see previous definition of 'GL_PATCHES'
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\userinterface.cpp(16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\userinterface.cpp(23): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\userinterface.cpp(316): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\masterscoursework2\computer animations\coursework\cacw_2\cacw_2\userinterface.cpp(328): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  All 2816 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'D:\MastersCourseWork2\Computer Animations\CourseWork\CACW_2\CACW_2\x64\Release\vc120.pdb'; linking object as if no debug info
+  A2_Rigid.vcxproj -> D:\MastersCourseWork2\Computer Animations\CourseWork\CACW_2\CACW_2\x64\Release\CACW_2.exe

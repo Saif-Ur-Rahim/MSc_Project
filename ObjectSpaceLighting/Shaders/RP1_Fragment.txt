@@ -1,0 +1,33 @@
+#version 330 core
+
+//Shader is loaded and this value is edited after that the shader is recompiled
+#define VCount 
+
+//Output data
+out vec3 FragColor;
+
+//Shader Input data
+in vec2 FragTextureCoordinates;
+in vec3 FragNormal;
+in vec3 FragPos;
+in float VertexIndex;
+in float FragTriIndex;
+in float FragVertexCount;
+
+//Texture data
+uniform sampler2D textureData;
+uniform float textureAttached;
+
+//Light Properties
+uniform vec3 lightPos; 
+uniform vec3 viewPos; 
+uniform vec3 lightColor;
+
+void main()
+{   
+    //Divinding by 3 to get floating point normalized triangle count
+    float tricount = VCount/3;
+	
+	//Generation of Texture Map
+    FragColor = vec3(FragTextureCoordinates.x,FragTextureCoordinates.y,(FragTriIndex/tricount)); 
+}

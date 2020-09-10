@@ -1,0 +1,231 @@
+#version 430
+//SSBOs
+layout( std430, binding=1 ) buffer FrameBufferData
+    {
+    float frameBufferData[ ]; 
+    };
+
+	layout( std430, binding=2 ) buffer VertBuffer
+    {
+    float vertexData[ ]; 
+    };
+
+	layout( std430, binding= 3 ) buffer TextureBuffer
+    {
+     float textureData[ ]; 
+    };
+
+layout(local_size_x = 1, local_size_y = 1) in;
+
+
+//Output image
+layout(rgba32f, binding = 0) uniform image2D img_output;
+
+//Uniform Buffer
+uniform float TextureWidth;
+uniform float TextureHeight;
+uniform float PreProcessedElementCount;
+uniform vec3 directionalLightColor;
+uniform vec3 directionalLightPos; 
+uniform vec3 viewPos;
+uniform mat4 modelMatrix;
+
+//Custom Properties
+float ColorValue;
+
+//Calculates the color when using a directional light.
+vec3 CalcDirLight(vec3 FragNormal, vec3 FragPos)
+{
+    float ambientStrength = 1.0f;
+    vec3 ambient = ambientStrength * directionalLightColor;
+	vec3 norm = normalize(FragNormal);
+    vec3 lightDir = normalize(directionalLightPos - FragPos);
+    float diff = max(dot(norm, lightDir), 0.0);
+    vec3 diffuse = diff * directionalLightColor;
+    float specularStrength = 0.5;
+    vec3 viewDir = normalize(viewPos - FragPos);
+    vec3 reflectDir = reflect(-lightDir, norm);  
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+    vec3 specular = specularStrength * spec * directionalLightColor;  
+    return (ambient + diffuse + specular);
+}
+
+//Find the distance between point and a line
+float DistanceBetweenPointAndLine(float xi, float yi, vec2 p1, vec2 p2)
+{
+    float x = float(xi);
+	float y = float(yi);
+	
+	vec2 normalVector = vec2(((-1)*(p2.y - p1.y)), (p2.x - p1.x));
+
+
+	// find the c constant of the equation (n.p - c)/|n|. This is done with respect to the point passed
+	float c = (normalVector.x*(p1.x - x ) + (normalVector.y*(p1.y -y)));
+
+	// find the magnitude of the normal vector
+	float magnitudeOfNormal = (sqrt(pow(normalVector.x, 2) + pow(normalVector.y, 2)));
+	
+	// Calculate the distance
+	float distance = c / magnitudeOfNormal;
+	
+	// return the distance
+	return distance;
+}
+
+
+
+
+void main() {
+
+   vec4 pixel;
+  // get index in global work group i.e x,y position
+  ivec2 pixel_coords = ivec2(gl_GlobalInvocationID.xy);
+  
+  //Casting to round off
+  highp int resInt = int(TextureWidth);
+
+  //Getting Indices so we can do 2D matrix traversal on 1D data
+  int TextureMapIndex   =  pixel_coords.x * resInt+  pixel_coords.y;
+  int TexturePixelIndex = pixel_coords.x  * resInt +  pixel_coords.y;
+
+  TexturePixelIndex = TexturePixelIndex * 3;
+  TextureMapIndex = TextureMapIndex * 3;
+
+  //Getting RBG, UV and Triangle Index
+  float r = textureData[TexturePixelIndex] ;
+  float g = textureData[TexturePixelIndex + 1] ;
+  float b = textureData[TexturePixelIndex + 2] ;
+
+  float u  = frameBufferData[TextureMapIndex] ;
+  float v  = frameBufferData[TextureMapIndex + 1] ;
+  float ti = frameBufferData[TextureMapIndex + 2] ;
+
+  //Create a pixel struct
+  pixel = vec4(r, g, b, 1.0);
+
+  //store it in output image
+  imageStore(img_output, pixel_coords, pixel);
+
+  //If no data in frame buffer leave it
+  if(u == 0.0 && v == 0.0 && ti == 0.0)
+  {
+   
+  }
+  else
+  {
+  
+  //If data is present then get the preprocessed data 
+  ti = ti * PreProcessedElementCount;
+  highp int vertexDataIndex = int(ti);
+  vertexDataIndex = vertexDataIndex * 27;
+  
+  //Get attributes of all the vertices in the triangle
+  vec3 Position_0 = vec3(vertexData[vertexDataIndex],vertexData[vertexDataIndex + 1],vertexData[vertexDataIndex + 2]); 
+  vec3 Normal_0   = vec3(vertexData[vertexDataIndex + 3],vertexData[vertexDataIndex + 4],vertexData[vertexDataIndex + 5]); 
+  vec2 TexCoords_0   = vec2(vertexData[vertexDataIndex + 6],vertexData[vertexDataIndex + 7]);
+
+  vec3 Position_1 = vec3(vertexData[vertexDataIndex + 9],vertexData[vertexDataIndex + 10],vertexData[vertexDataIndex + 11]); 
+  vec3 Normal_1   = vec3(vertexData[vertexDataIndex + 12],vertexData[vertexDataIndex + 13],vertexData[vertexDataIndex + 14]); 
+  vec2 TexCoords_1   = vec2(vertexData[vertexDataIndex + 15],vertexData[vertexDataIndex + 16]);
+
+  vec3 Position_2 = vec3(vertexData[vertexDataIndex +18],vertexData[vertexDataIndex + 19],vertexData[vertexDataIndex + 20]); 
+  vec3 Normal_2   = vec3(vertexData[vertexDataIndex + 21],vertexData[vertexDataIndex + 22],vertexData[vertexDataIndex + 23]); 
+  vec2 TexCoords_2   = vec2(vertexData[vertexDataIndex + 24],vertexData[vertexDataIndex + 25]);
+
+  float u_0 = TexCoords_0.x *  TextureWidth;
+  float v_0 = TexCoords_0.y * TextureHeight;
+ 
+  highp int texturePixelX_0 = int(u_0);
+  highp int texturePixelY_0 = int(v_0);
+ 
+  float u_1 = TexCoords_1.x *  TextureWidth;
+  float v_1 = TexCoords_1.y * TextureHeight;
+ 
+  highp int texturePixelX_1 = int(u_1);
+  highp int texturePixelY_1 = int(v_1);
+   
+  float u_2 = TexCoords_2.x *  TextureWidth;
+  float v_2 = TexCoords_2.y * TextureHeight;
+ 
+  highp int texturePixelX_2 = int(u_2);
+  highp int texturePixelY_2 = int(v_2);
+
+  //Create a new Coordinate struct
+  ivec2 new_coords = ivec2(texturePixelX_0,texturePixelY_0);
+
+  //BaryCentric Interpolation data
+  float alpha = 0.0;
+  float beta  = 0.0;
+  float gamma = 0.0;
+
+  float tx0 = float(texturePixelX_0);
+  float ty0 = float(texturePixelY_0);
+
+  float tx1 = float(texturePixelX_1);
+  float ty1 = float(texturePixelY_1);
+
+  float tx2 = float(texturePixelX_2);
+  float ty2 = float(texturePixelY_2);
+
+  vec2 P0 =vec2(tx0,ty0);
+  vec2 P1 =vec2(tx1,ty1);
+  vec2 P2 =vec2(tx2,ty2);
+
+  //Fragment data for light calculation
+  vec3 FragNormal = mat3(transpose(inverse(modelMatrix))) * Normal_0;  
+  vec3 FragPos = vec3(modelMatrix * vec4(Position_0, 1.0));
+ 
+  //Loop over the current original texutre
+  for(float x =0;x< TextureWidth;x=x+1)
+  {
+    for(float y =0;y<TextureHeight;y=y+1)
+    {
+	  
+	 alpha = (DistanceBetweenPointAndLine(x, y,P1,P2)) / (DistanceBetweenPointAndLine(tx0,ty0,P1,P2));
+	 beta =  (DistanceBetweenPointAndLine(x, y,P0,P2)) / (DistanceBetweenPointAndLine(tx1,ty1,P0,P2));
+	 gamma = (DistanceBetweenPointAndLine(x, y,P0,P1)) / (DistanceBetweenPointAndLine(tx2,ty2,P0,P1));
+
+	if ((alpha < 0.0) || (beta < 0.0) || (gamma < 0.0))
+	{
+	   // dont do anything		
+	}
+	else
+	{
+	  
+	  //if pixel is inside triangle get the effecting properties
+	  highp int texturePixelX = int(x);
+      highp int texturePixelY = int(y);
+
+	  highp int resInt2 = int(TextureWidth);
+      int effectedTexturePixelIndex = texturePixelX * resInt2 +  texturePixelY;
+      
+	  effectedTexturePixelIndex = effectedTexturePixelIndex*3;
+
+      float e_r = textureData[effectedTexturePixelIndex] ;
+      float e_g = textureData[effectedTexturePixelIndex + 1] ;
+      float e_b = textureData[effectedTexturePixelIndex + 2] ; 
+
+	
+      //Calculate the shading
+      vec3 result;
+      result = CalcDirLight(FragNormal, FragPos);
+	  
+	  //Get the original pixel
+	  vec3 pixelcolor;
+      pixelcolor = vec3(e_r,e_g ,e_b);
+
+	  //Calculate and store the final data
+      vec3 finalColor = result * pixelcolor;
+	
+	  new_coords = ivec2(x,y);
+      pixel = vec4(finalColor.x, finalColor.y, finalColor.z, 1.0);
+	  //pixel = vec4(e_r,e_g, e_b, 1.0);
+      imageStore(img_output, new_coords, pixel);
+
+	}
+
+  }
+	
+}
+}
+}
